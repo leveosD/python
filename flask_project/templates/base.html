@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+	{% block content %} {% endblock %}
+	<div class="container mt-5">
+		<form method="post">
+            <input type="text" name="title" id="title" value="{{ title }}" class="form-control"><br>
+            <input type="date" name="release_date" id="release_date" value="{{ date }}" min="1895-12-28">
+            <input type="submit" class="btn btn-success" value="Отправить"><br>
+        </form>
+	</div>
+    {% if extra_info != "" %}
+        <p> {{ extra_info }} </p>
+    {% endif %}
+    <a href="/" class="btn btn-warning">Домашняя страница</a>
+</body>
+</html>
